@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<!-- 定时任务 -->
+	<package name="student" namespace="/student" extends="web-default">
+		<action name="*_*" class="com.ysusoft.core.student.action.StudentAction" method="{1}">
+			<result name="list">/jsp/studentList.jsp</result>
+			<result name="listAll">/jsp/index.jsp</result>
+			<result name="toList" type="redirectAction">
+				<param name="actionName">/student/studentTaskAction_list.action</param>
+			</result>
+		</action>
+		<action name="listAll" class="com.ysusoft.core.student.action.StudentAction" method="listAll">
+			<result name="list">/jsp/studentList.jsp</result>
+			<result name="listAll">/index.jsp</result>
+			<result name="toList" type="redirectAction">
+				<param name="actionName">/student/studentTaskAction_list.action</param>
+			</result>
+		</action>
+		<action name="list" class="com.ysusoft.core.student.action.StudentAction" method="list">
+			<result name="SUCCESS">/jsp/student/studentList.jsp</result>
+		</action>
+		
+	</package>
+</struts>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+                 "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+        
+	<hibernate-mapping package="com.ysusoft.core.student.model">
+		<class name="Student" table="t_student">
+			<id name="ID" column="C_ID"/>
+			<property name="name" type="java.lang.String" column="C_NAME" length="255"/>
+   		</class>
+    
+</hibernate-mapping>
